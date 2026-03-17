@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="251.0" prefWidth="283.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lmdsio.projetbiblio.controllers.MasterController">
+   <MenuBar prefWidth="184.0">
+     <menus>
+       <Menu mnemonicParsing="false" text="Utilisateur">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Connexion" />
+               <MenuItem mnemonicParsing="false" text="Déconnexion" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Livres">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Recherche" />
+               <MenuItem mnemonicParsing="false" text="Ajout" />
+         </items>
+       </Menu>
+     </menus>
+   </MenuBar>
+   <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS" />
+</VBox>
