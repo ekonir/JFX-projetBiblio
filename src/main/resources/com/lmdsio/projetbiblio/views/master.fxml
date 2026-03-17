@@ -20,5 +20,5 @@
        </Menu>
      </menus>
    </MenuBar>
-   <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS" />
+   <ScrollPane fx:id="contentPane" fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS" />
 </VBox>
