@@ -16,6 +16,16 @@ public class MasterController {
         showContent("welcome");
     }
 
+    @FXML
+    protected void onMenuConnexion(){
+        showContent("login");
+    }
+
+    @FXML
+    protected void onApropos(){
+        showContent("about");
+    }
+
     protected void showContent(String fxmlName) {
         Node contentNode;
 
