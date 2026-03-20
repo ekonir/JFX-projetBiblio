@@ -7,6 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ToggleButton;
+
+import javax.swing.*;
 
 
 public class AboutController {
@@ -15,11 +18,11 @@ public class AboutController {
     private Label credits;
 
     @FXML
-    private Label tggleCredits;
+    private ToggleButton tggleCredits;
 
     @FXML
     protected void showCredit() {
-        if (!tggleCredits.isSelected()) {
+        if (tggleCredits.isSelected()) {
             credits.setVisible(true);
         } else {
             credits.setVisible(false);

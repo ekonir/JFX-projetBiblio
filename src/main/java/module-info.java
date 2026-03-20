@@ -1,6 +1,7 @@
 module com.lmdsio.projetbiblio {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens com.lmdsio.projetbiblio to javafx.fxml;

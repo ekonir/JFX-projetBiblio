@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="261.0" prefWidth="283.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lmdsio.projetbiblio.controllers.AboutController">
+<VBox alignment="TOP_CENTER" prefHeight="233.0" prefWidth="283.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lmdsio.projetbiblio.controllers.AboutController">
    <Label text="Biblio 1.0" textAlignment="CENTER">
       <opaqueInsets>
          <Insets />
@@ -19,10 +19,13 @@
          <Image url="@../images/books_couleur.png" />
       </image>
       <VBox.margin>
-         <Insets bottom="20.0" top="15.0" />
+         <Insets bottom="10.0" top="15.0" />
       </VBox.margin>
    </ImageView>
-   <ToggleButton fx:id="tggleCredits" mnemonicParsing="false" onAction="#showCredit" text="Crédits" />
+   <ToggleButton fx:id="tggleCredits" mnemonicParsing="false" onAction="#showCredit" text="Crédits">
+      <VBox.margin>
+         <Insets top="5.0" />
+      </VBox.margin></ToggleButton>
    <Label fx:id="credits" text="L. pisaneschi - BTS SIO - La Martiniere Duchère" visible="false">
       <VBox.margin>
          <Insets top="5.0" />
