@@ -3,6 +3,7 @@ module com.lmdsio.projetbiblio {
     requires javafx.fxml;
     requires java.desktop;
     requires java.sql;
+    requires bcrypt;
 
 
     opens com.lmdsio.projetbiblio to javafx.fxml;

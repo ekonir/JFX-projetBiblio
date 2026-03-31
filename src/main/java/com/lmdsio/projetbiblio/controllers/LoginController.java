@@ -1,5 +1,6 @@
 package com.lmdsio.projetbiblio.controllers;
 
+import com.lmdsio.projetbiblio.services.UtilisateurService;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -15,12 +16,21 @@ public class LoginController {
     private void onLoginClick() {
         String login = loginField.getText();
         String password = passwordField.getText();
-        if (password.equals("mdp")) {
-            loginText.setText("Hello " + login + " !");
-            loginText.setStyle("-fx-text-fill: green");
-        } else {
-            loginText.setText("Identifiants incorrects !");
-            loginText.setStyle("-fx-text-fill: red");
+
+        UtilisateurService service = new UtilisateurService();
+        try {
+            if (service.signIn(login, password)) {
+                loginText.setText("Hello " + service.getUser().getLogin() + " !");
+                loginText.setStyle("-fx-text-fill: green");
+            } else {
+                loginText.setText("Identifiants incorrects !");
+                loginText.setStyle("-fx-text-fill: red");
+            }
         }
+        catch (Exception ex) {
+            loginText.setText(ex.getMessage());
+            loginText.setStyle("-fx-text-fill: orange");
+        }
+
     }
 }

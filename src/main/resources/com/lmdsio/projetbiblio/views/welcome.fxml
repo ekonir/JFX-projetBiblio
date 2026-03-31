@@ -3,8 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lmdsio.projetbiblio.controllers.WelcomeController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" text="Bienvenue dansl’application Biblio !" VBox.vgrow="ALWAYS" />
+      <Label alignment="CENTER" contentDisplay="CENTER" text="utilisateur : " + service.getUser().getLogin() VBox.vgrow="ALWAYS" />
+
    </children>
 </VBox>

@@ -26,6 +26,7 @@ public class MasterController {
         showContent("about");
     }
 
+
     protected void showContent(String fxmlName) {
         Node contentNode;
 
