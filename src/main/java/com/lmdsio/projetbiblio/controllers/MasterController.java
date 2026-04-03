@@ -1,6 +1,8 @@
 package com.lmdsio.projetbiblio.controllers;
 
 import com.lmdsio.projetbiblio.BiblioApplication;
+import com.lmdsio.projetbiblio.controllers.ContentController;
+import com.lmdsio.projetbiblio.services.UtilisateurService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,6 +15,7 @@ public class MasterController {
 
     @FXML
     protected void initialize() {
+        ContentController.setMaster(this);
         showContent("welcome");
     }
 
@@ -22,8 +25,21 @@ public class MasterController {
     }
 
     @FXML
+    protected void OnMenuDeconnexion(){
+        boolean ok = new UtilisateurService().signOut();
+        if(ok){
+            showContent("welcome");
+        }
+    }
+
+    @FXML
     protected void onApropos(){
         showContent("about");
+    }
+
+    @FXML
+    protected void onMenuBienvenue(){
+        showContent("welcome");
     }
 
 

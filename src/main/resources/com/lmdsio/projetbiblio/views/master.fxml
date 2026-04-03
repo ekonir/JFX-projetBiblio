@@ -10,7 +10,7 @@
          <items>
                <MenuItem fx:id="menuBienvenue" mnemonicParsing="false" onAction="#onMenuBienvenue" text="Bienvenue" />
            <MenuItem fx:id="menuConnexion" mnemonicParsing="false" onAction="#onMenuConnexion" text="Connexion" />
-               <MenuItem fx:id="menuDeconnexion" mnemonicParsing="false" onAction="#signOut" text="Déconnexion" />
+               <MenuItem fx:id="menuDeconnexion" mnemonicParsing="false" onAction="#OnMenuDeconnexion" text="Déconnexion" />
          </items>
        </Menu>
        <Menu mnemonicParsing="false" text="Livres">

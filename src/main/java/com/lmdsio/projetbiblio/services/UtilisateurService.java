@@ -8,7 +8,6 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public class UtilisateurService extends DbService {
 
     static private Utilisateur user = null;
-
     public Utilisateur getUser() {
         return user;
     }

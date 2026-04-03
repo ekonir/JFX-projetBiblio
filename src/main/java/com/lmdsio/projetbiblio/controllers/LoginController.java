@@ -1,8 +1,10 @@
 package com.lmdsio.projetbiblio.controllers;
 
 import com.lmdsio.projetbiblio.services.UtilisateurService;
+import static com.lmdsio.projetbiblio.controllers.ContentController.master;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
 
 public class LoginController {
     @FXML
@@ -22,6 +24,7 @@ public class LoginController {
             if (service.signIn(login, password)) {
                 loginText.setText("Hello " + service.getUser().getLogin() + " !");
                 loginText.setStyle("-fx-text-fill: green");
+                master.showContent("welcome");
             } else {
                 loginText.setText("Identifiants incorrects !");
                 loginText.setStyle("-fx-text-fill: red");

@@ -12,9 +12,18 @@ import javafx.scene.control.*;
 
 public class WelcomeController extends DbService {
 
-    static private Utilisateur user = null;
-    public Utilisateur getUser() {
-        return user;
+    @FXML
+    private Label userText;
+
+    @FXML
+    protected void initialize() {
+        UtilisateurService service = new UtilisateurService();
+        Utilisateur connecte = service.getUser();
+
+        if( connecte == null ) {
+            userText.setText("veuillez vous connecter");
+        } else {
+            userText.setText("Utilisateur : " + connecte.getLogin() + " ( "+ connecte.getNom()+" " + connecte.getPrenom()+ " )");}
     }
 
 }
